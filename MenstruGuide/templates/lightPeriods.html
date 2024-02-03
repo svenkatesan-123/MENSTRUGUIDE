@@ -1,0 +1,244 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    {% include "header.html" %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{%static 'content.css'%}">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/ace75cb71d.js" crossorigin="anonymous"></script>
+    
+    <title>Dashboard Sidebar Menu</title> 
+</head>
+<body>
+   <!-- nav -->
+  
+ <!-- header end -->
+
+<!-- home section start -->
+<section class="home-section" >
+    
+    <nav class="sidebar close">
+        <header>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="homeRemedies">
+                            <i class="fa-solid fa-mortar-pestle icon" title="Home Remedies"></i>
+                            <span class="text nav-text">Home Remedies
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="menopause">
+                            <i class="fa-solid fa-venus icon" title="Menopause"></i>
+                            <span class="text nav-text">Menopause</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="skinChange">
+                            <i class="fa-solid fa-spray-can-sparkles icon" title="Skin and Hairs"></i>
+                            <span class="text nav-text">Skin and Hairs</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-hands-holding-child icon" title="Anganwadi"></i>
+                            <span class="text nav-text">Anganwadi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="hygiene">
+                            <i class="fa-solid fa-hands-bubbles icon" title="Hygiene"></i>
+                            <span class="text nav-text">Hygiene</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-person-walking icon" title="Diet and Exercise"></i>
+                            <span class="text nav-text">Diet and Exercise</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-regular fa-face-tired icon" title="Emotions"></i>
+                            <span class="text nav-text">Emotions</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="doDont">
+                            <i class="fa-solid fa-clipboard-list icon" title="Do's and Do not's"></i>
+                            <span class="text nav-text">Do's and Do not's</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-droplet icon" title="Bleeding"></i>
+                            <span class="text nav-text">Bleeding</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="whylate">
+                            <i class="fa-solid fa-clock icon" title="Why Late?"></i>
+                            <span class="text nav-text">Why Late?</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="quiz">
+                            <i class="fa-solid fa-question icon" title="Awareness Quiz"></i>
+                            <span class="text nav-text">Awareness Quiz</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            
+        </div>
+
+    </nav>
+
+
+    <section class="home">
+        <section class="post-heater">
+            <div class="header-content post-container">
+
+                <!-- <a href="blog"><button id="post" class="normal">Back to Blog</button></a> -->
+
+                <h1 class="header-title">LIGHT PERIODS</h1>
+                <!-- <img src="Late-Period.jpg" alt="" class="header-img"> -->
+
+            </div>
+        </section>
+
+
+        <section class="post-content post-container">
+
+            <!-- <h2 class="sub-heading">Factors that Cause Uneven Periods</h2> -->
+            <p class="post-text">
+                The hormones that might cause heavy or irregular periods can be regulated and balanced naturally,
+                while there are no home cures that can guarantee lighter periods. The following advice could be
+                helpful:
+            </p>
+
+            <!-- <h2 class="sub-heading">2.Low Body Weight </h2> -->
+
+            <h2 class="sub-heading">1. Ginger tea</h2>
+
+            <p class="post-text">
+                Due to its anti-inflammatory qualities, ginger may help to lessen pain and discomfort associated
+                with menstruation. Moreover, drinking ginger tea helps encourage blood flow, which may lighten
+                periods.
+            </p>
+
+            <h2 class="sub-heading">2. Cinnamon</h2>
+
+            <p class="post-text">
+                Studies have indicated that cinnamon can help control menstrual periods and lessen severe bleeding.
+                You can have cinnamon tea or add it to your diet.
+            </p>
+
+            <h2 class="sub-heading">3. Turmeric</h2>
+
+            <p class="post-text">
+                Due to its anti-inflammatory qualities and potential role in hormone regulation, turmeric may be
+                able to lessen the frequency of heavy periods. You can make turmeric tea or add it to your diet.
+            </p>
+
+            <h2 class="sub-heading">4. Exercise</h2>
+
+            <p class="post-text">
+                Regular exercise helps improve blood flow and hormone regulation, which may lessen the frequency of
+                heavy periods. Strive to work out every day for at least 30 minutes.
+            </p>
+
+            <h2 class="sub-heading">5. Heat therapy</h2>
+
+            <p class="post-text">
+                By increasing blood flow and relieving menstrual cramps, applying heat to the lower abdomen may help
+                lessen periods. Use a heating pad or a hot water bottle.
+            </p>
+
+            <h2 class="sub-heading">6. Stay hydrated</h2>
+
+            <p class="post-text">
+                Drink plenty of water to stay hydrated. This can help to lessen bloating and inflammation during
+                periods. Moreover, it may assist to increase blood flow, which can lighten periods.
+
+            </p>
+
+            <h2 class="sub-heading">7. Supplemental vitamins</h2>
+
+            <p class="post-text">
+                Iron, vitamin B6, and magnesium are just a few of the vitamins and minerals that may help control
+                menstrual periods and lessen heavy bleeding. You might discuss with your doctor increasing your diet
+                of foods high in these nutrients or taking vitamin supplements.
+
+            </p>
+
+
+
+
+            <p class="post-text">
+                It's vital to remember that speaking with your doctor is always recommended if you have frequent or
+                heavy periods in order to rule out any underlying medical concerns.
+            </p>
+
+
+
+
+        </section>
+
+        <!-- <div class="text-box">
+        
+       
+        
+    
+
+    </div> -->
+        <div class="navigation_btn">
+            <a href="premenstrualsyndrome" class="prev_btn">Previous</a>
+            <a href="R5" class="next_btn">Next</a>
+        </div>
+ <!-- footer section starts -->
+ {% include "footer.html" %}
+ <!-- footer section ends -->
+    </section>
+
+
+
+  </section>
+
+
+
+
+    <script src="{%static 'content.js'%}"></script>
+
+</body>
+</html>

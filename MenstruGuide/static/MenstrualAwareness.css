@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+/* nav */
+
+body{
+    
+	line-height: 1.5;
+	font-family: 'Merriweather', sans-serif;
+
+	/* background:  whitesmoke; */
+	/* background: #f7b3b7; */
+	
+	
+
+}
+body.hidden-scrolling{
+	overflow-y: hidden;
+}
+
+.container{
+	max-width: 1650px;
+	margin:auto;
+}
+.nav-menu ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+#menu-item-discuss{
+	background-color: #A20000;
+	color:white;
+	padding-left:0.8rem;
+	padding-right:0.8rem;
+	
+}
+/* /header/ */
+
+.mawarenessbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #F2D4D6;
+}
+
+.mawarenessbody .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+
+.mawarenessbody .container .card {
+    position: relative;
+    min-width: 320px;
+    height: 480px;
+    box-shadow: inset 5px 5px 5px #F2D4D6,
+        inset -5px -5px 15px #efa8a2,
+        5px 5px 15px #F2D4D6, -5px -5px 15px #efa8a2;
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.mawarenessbody .container .card:nth-child(1) .box .content a {
+    background: #A20000;
+}
+
+.mawarenessbody .container .card:nth-child(2) .box .content a {
+    background: #A20000;
+}
+
+.mawarenessbody .container .card:nth-child(3) .box .content a {
+    background: #A20000;
+}
+
+.mawarenessbody .container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #efa8a2;
+    border-radius: 15px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* overflow: hidden; */
+    transition: 0.5s;
+}
+
+.mawarenessbody .container .card .box:hover {
+    transform: translateY(-50px);
+}
+
+.mawarenessbody .container .card .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    /* background::#A20000; */
+}
+
+.mawarenessbody .container .card .box .imgBx img{
+    position: relative;
+    width:100%;
+    height: 40%;
+    /* background-image: url('img/blog/2.png'); */
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px;
+  
+}
+
+.mawarenessbody .container .card .box .content {
+    padding: 20px;
+    text-align: center;
+    color: #A20000;
+}
+
+/* body .container .card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color:rgb(196, 106, 106);
+  } */
+
+.mawarenessbody .container .card .box .content h3 {
+    font-size: 1.8rem;
+    color: #A20000;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+}
+
+.mawarenessbody .container .card .box .content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #A20000;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.mawarenessbody .container .card .box .content .con {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #A20000;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.mawarenessbody .container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #A20000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px#A20000;
+    transition: 0.5s;
+}
+
+.mawarenessbody .container .card .box .content a:hover {
+    box-shadow: 0 10px 20px white;
+    background: #A20000;
+    color: white;
+}

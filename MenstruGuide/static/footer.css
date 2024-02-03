@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,700&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*	footer	*/
+footer{
+    width: 100%;
+    margin:0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2rem;
+    /* padding-bottom: 5%; */
+    font-size:small;
+    
+    background: #585858;
+}
+
+footer .footer_container .sec img{
+    width: 30%;
+    border-radius: 1rem;
+}
+
+footer .footer_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+footer .footer_container .sec h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .footer_container .sec h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #cb0f80;
+}
+
+footer .footer_container .sec p{
+    color: #fff;
+}
+
+.footer_sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px;
+}
+
+.footer_sci li{
+    list-style: none;
+}
+
+.footer_sci li a{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #2b2b2c;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.footer_sci li a:hover{
+    background: #787373;
+}
+
+.footer_sci li a .fa-brands, .fa-solid{
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer_quicklinks{
+    position: relative;
+}
+
+.footer_quicklinks li{
+    list-style: none;
+}
+
+.footer_quicklinks li a{
+    color: #f7f7f7;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer_quicklinks li a:hover{
+    color: #cb0f80;
+    font-weight: 550;
+    font-size: 1rem;
+    transition: all ease 0.5s;
+}
+
+.footer_sec_contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer_sec_contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #cb0f80;
+}
+
+.footer_contact_info{
+    position: relative;
+}
+
+.footer_contact_info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+.footer_contact_info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer_contact_info li span{
+    color: #fff;
+}
+
+.footer_contact_info a{
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.footer_contact_info a:hover{
+    color: #cb0f80;
+}
+
+.footer_copyrightText{
+    font-size: 1rem;
+    background: #434346;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+}
+
+
+@media(max-width: 991px){
+    footer{
+        padding: 40px;
+    }
+    footer .footer_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer_copyrightText{
+        padding: 8px 40px;
+    }
+}
+
+@media(max-width: 768px){
+    footer .footer_container{
+        grid-template-columns: repeat(1, 1fr);
+	}
+}

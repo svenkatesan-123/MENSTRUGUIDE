@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', sans-serif;
+  }
+  .result{
+    display: flex;
+    justify-content: space-between;
+    padding-top:5%;
+    /* margin-left:5%;
+    margin-right:5%; */
+  }
+  .result p{
+    margin-left:5%;
+    
+  }
+  .container1 h1{
+    color:#A20000;
+  }
+  
+  
+  #res-res{
+    width:33.3%;
+    display: flex;
+    
+  }
+  #res-res1{
+    width:33.3%;
+    display: flex;
+    
+  }
+  #res-res2{
+    width:33.3%;
+    display: flex;
+    
+  }
+  .result h2{
+    font-size: 100%;
+  }
+  body {
+  
+   font-family: 'Merriweather', sans-serif;
+   line-height: 2;
+    background-image: url(backgrd.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  form {
+    position :absolute;
+    
+    top:25%;
+    padding:5%;
+     padding-top:2%;
+     padding-bottom: 2%;
+     left:30%;
+  /* display: flex; 
+   flex-direction: row;  */
+   align-items: center; 
+     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.591);
+    background-color: #F2D4d6;
+  
+   
+   
+  }
+  form h2{
+    
+    text-align: center;
+    padding-bottom:7%;
+    color: #A20000;
+    text-shadow: 2px 2px #e0a4a4;
+    font-size:2.5rem;
+    
+  }
+  label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  }
+  input[type="number"]{
+    margin-left: 0.001%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+    border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  font-size: 16px;
+    background-color: #f9e1e3;
+  }
+  input[type="date"] {
+    margin-left: 2%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+    border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  font-size: 16px;
+    background-color: #f9e1e3;
+  }
+  input[type="submit"] {
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    margin-left:33%;
+  background-color: #a20000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  }
+  input[type="submit"]:hover {
+  background-color: #ea0808;
+  }
+  #result {
+  margin-top: 50px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+   
+  }
+  #result h2{
+    padding-bottom:1%;
+    color: #A20000;
+    text-shadow: 2px 2px #e0a4a4;
+    font-size:2.5rem;
+    margin-left:15%;
+    text-align: left;
+    
+  }
+  .resfl{
+    display: flex;
+    width:80%;
+   
+  
+    justify-content: space-around;
+  }
+  
+  #result p{
+    margin-top:1.8%;
+    margin-right:10%;
+    font-weight:500;
+    font-size:1.3rem;
+   
+  }
+  #calculatebtn{
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    margin-left:33%;
+  background-color: #a20000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  }
+  .container1{
+    position :relative;
+     margin-right: 25%;
+     margin-top: 5%;
+     margin-bottom: 5%;
+      top:25%;
+      padding:5%;
+      width:50vw;
+       padding-top:2%;
+       padding-bottom: 2%;
+       left:25%;
+      /* display: flex; 
+       flex-direction: row;  */
+       align-items: center; 
+       border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.591);
+      background-color: #F2D4d6;
+  }
+  .form{
+  
+    padding-top:5%;
+  }
+  #ovresfl{
+    margin-right:6%;
+  }
+  
+  .calendar {
+    background-color: #F2D4d6;
+    padding:2%;
+    border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.591);
+  
+  }
+  .day {
+  width: calc(100% / 7);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  }
+  .today {
+  background-color: #4CAF50;
+  color: white;
+  }
+  .daysofweek{
+    background-color: yellow;
+  }
+  .ovulation {
+  background-color: #FFA07A;
+  }
+  .fertility {
+  background-color: #87CEFA;
+  }
+  
+  
