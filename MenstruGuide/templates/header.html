@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    {% block title %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menstruguide</title>
+  <link rel="stylesheet" href="{%static 'header.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   
+  <!-- header starts -->
+  <header class="header">
+    <div class="container">
+        <div class="header-main">
+            <div class="logo">
+                <a href="/"><img src="{%static 'logo.png'%}" width="75vh"></a>
+            </div>
+            <div class="open-nav-menu">
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+            </div>
+            <!-- navigation menu start -->
+            <div class="nav-menu">
+                <div class="close-nav-menu">
+                    <img src="{%static 'close.svg'%}" alt="close">
+                </div>
+                <ul class="menu">
+                    <li class="menu-item menu-item-has-children">
+                        <a href="MenstrualAwareness" data-toggle="sub-menu">Menstrual Awarness</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="homeRemedies">Home Remedies</a></li>
+                            <li class="menu-item"><a href="">Anganbadi And Ngo</a></li>
+                            <li class="menu-item"><a href="skinChange">Skin And Hair</a></li>
+                            <li class="menu-item"><a href="#">Diet and Exercise</a></li>
+                            <li class="menu-item"><a href="#">Bleeding</a></li>
+                            <li class="menu-item"><a href="#">Emotions</a></li>
+                            <li class="menu-item"><a href="doDont">Do's and Dont's</a></li>
+                            <li class="menu-item"><a href="quiz">Quizes</a></li>
+                            <li class="menu-item"><a href="menopause">Menopause</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#" data-toggle="sub-menu">Product </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Menstruation</a></li>
+                            <li class="menu-item"><a href="#">Pregnancy Kits</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#" data-toggle="sub-menu">Track </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="pcosHome">PCOS Prediction</a></li>
+                            <li class="menu-item"><a href="ovulation">Ovulation Tracker</a></li>
+                            <li class="menu-item"><a href="nextPeriod">Period Calculator</a></li>
+                            <li class="menu-item"><a href="pregnancyTracker">Pregnancy test calculator</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#" data-toggle="sub-menu">Health Condition </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Cancer</a></li>
+                            <li class="menu-item"><a href="#">PCO's</a></li>
+                            <li class="menu-item"><a href="#">Others</a></li>
+                            <li class="menu-item"><a href="#">Consult / Find a Doctor</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="login">
+                        <a href="login" class="login_a">Login</a>
+                        <!-- <button class="login_a">Login</button> -->
+                    </li>
+
+                    <li class="menu-item">
+                        <a id="menu-item-discuss" href="discussionForum" style="border-radius: 0.4rem;">Discuss</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- navigation menu end -->
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+  <!-- header end -->
+</body>
+</html>

@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'login.css'%}">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+
+    $(document).ready(function () {
+      $(".login1").hide();
+      $(".register_li").addClass("active");
+
+      $(".login_li").click(function () {
+        $(this).addClass("active");
+        $(".register_li").removeClass("active");
+        $(".login1").show();
+        $(".register").hide();
+      })
+
+      $(".register_li").click(function () {
+        $(this).addClass("active");
+        $(".login_li").removeClass("active");
+        $(".register").show();
+        $(".login1").hide();
+      })
+    });
+  </script>
+
+  <!-- <%- include('css/PatientReg'); %> -->
+
+</head>
+
+<body>
+
+ 
+
+  <div class="wrap_form_wrap">
+    <div class="wrapper">
+      <div class="left">
+
+        <img src="{%static 'login.png' %}" alt="hospitallog">
+      </div>
+      <div class="right">
+        <div class="tabs">
+          <ul>
+            <li class="register_li">Register</li>
+            <li class="login_li">login</li>
+          </ul>
+        </div>
+
+        <form action="registerform" method="post">
+          {% csrf_token %}
+          <div class="register">
+            <div class="input_field">
+              <input type="text" name="fname" placeholder="First Name" class="input" required>
+            </div>
+            <div class="input_field">
+              <input type="text" name="mname" placeholder="Middle Name" class="input" required>
+               
+            </div>
+            <div class="input_field">
+              <input type="text" name="lname" placeholder="Last Name" class="input" 
+                required>
+            </div>
+            <div class="flex">
+              <div class="input_field">
+                <input type="number" name="mno" placeholder="Mobile Number" class="input" required>
+              </div>
+              <div class="input_field" style="margin-left: 1rem;">
+                <input type="email" name="remail" placeholder="Email" class="input" pattern=".+@.+.com" size="30">
+                
+              </div>
+            </div>
+            <div class="flex">
+              <div class="input_field">
+                <input type="password" name="rpass" placeholder="Password" class="input" required>
+              </div>
+              <div class="input_field" style="margin-left: 1rem;">
+                <input type="password" name="cpass" placeholder="Confirm Password" class="input" required>
+              </div>
+            </div>
+            <!-- <div class="btn" id="btn" type="submit" onclick="btn"><a href="#">Register</a></div> -->
+            <div class="btn" id="btn" onclick="btn">
+              <input type="submit" value="Register">
+            </div>
+          </div>
+        </form>
+        <h1>
+          {{result1}}
+        </h1>
+        <form action="loginform" method="post">
+          {% csrf_token %}
+          <div class="login1">
+            <div class="input_field">
+              <input type="email" name="remail" placeholder="E-mail" class="input" pattern=".+@.+.com" size="30"
+                required>
+            </div>
+            <div class="input_field">
+              <input type="password" name="rpass" placeholder="Password" class="input" required>
+            </div>
+            <a href="#">Forget Password?</a>
+            <!-- <div class="btn"><a href="#">Login</a></div> -->
+            <div class="btn" id="btn" onclick="btn">
+              <input type="submit" value="Login">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+   <!-- footer section starts -->
+   {% include "footer.html" %}
+   <!-- footer section ends -->
+
+</body>
+
+</html>

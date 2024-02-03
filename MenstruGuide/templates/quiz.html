@@ -1,0 +1,61 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+	{% include "header.html" %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="{%static 'quiz.css'%}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	
+	<section id="quizstart" class="quizstart">
+		<div class="quiz-container" id="quiz">
+			<div class="quiz-header">
+				<h2 id="question">Question Test</h2>
+				<ul class="quiz-ul">
+					<!-- 1 -->
+					<li class="quiz-li">
+						<input type="radio" name="answer" id="a" class="answer">
+						<label for="a" id="a_text">Answer</label>
+					</li>
+
+					<!-- 2 -->
+					<li class="quiz-li">
+						<input type="radio" name="answer" id="b" class="answer">
+						<label for="b" id="b_text">Answer</label>
+					</li>
+
+					<!-- 3 -->
+					<li class="quiz-li">
+						<input type="radio" name="answer" id="c" class="answer">
+						<label for="c" id="c_text">Answer</label>
+					</li>
+
+					<!-- 4 -->
+					<li class="quiz-li">
+						<input type="radio" name="answer" id="d" class="answer">
+						<label for="d" id="d_text">Answer</label>
+					</li>
+				</ul>
+			</div>
+			<button id="submit">Submit</button>
+		</div>
+	</section>
+
+	
+ <!-- footer section starts -->
+ {% include "footer.html" %}
+ <!-- footer section ends -->
+
+
+
+	<script src="{%static 'quiz.js'%}"></script>
+</body>
+
+</html>

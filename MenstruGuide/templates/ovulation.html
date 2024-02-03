@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	{% include "header.html" %}
+<head>
+	<title>Ovulation Calculator</title>
+	<link rel="stylesheet" href="{%static 'ovulation.css'%}">
+</head>
+<body>
+
+	<!-- nav -->
+	
+	<!-- header end -->
+
+	<form id="ovtracker">
+        <h2>Ovulation Tracker</h2>
+		<label for="last-period-date">Last Period Date:</label>
+		<input type="date" id="last-period-date" required>
+        <br>
+		<label for="cycle-length">Average Cycle Length(in days):</label>
+		<input type="number" id="cycle-length" min="21" max="35" required>
+        <br>
+		<input type="submit" value="Calculate">
+	</form>
+	<div id="result">
+        <div class="resfl"id="ovresfl" >
+            <h2 >Ovulation Date:</h2>
+            <p id="ovulation-date"></p>
+        </div >
+	    <div class="resfl">
+            <h2>Fertility Period:</h2>
+            <p id="fertility-period"></p>
+        </div>
+		<div class="calendar" id="calendar"></div>
+	</div>
+	
+
+	<script src="{%static 'ovulation.js'%}"></script>
+	    <!-- footer section starts -->
+ {% include "footer.html" %}
+ <!-- footer section ends -->
+</body>
+</html>
+

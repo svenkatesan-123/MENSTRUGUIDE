@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	{% include "header.html" %}
+<head>
+    <title>Period Tracker</title>
+    <link rel="stylesheet" href="{%static 'nextPeriod.css'%}">
+</head>
+<body>
+
+	<div id="bg_blur">	</div>
+	<!-- header end -->
+	
+		<div id="container">
+			<h1>Period Tracker</h1>
+			<form id="form" onsubmit="openPopup()">
+				<label for="last-period-date">Last Period Date:</label>
+				<input type="text" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" id="last-period-date" name="last-period-date"   required>
+	
+				<label for="cycle-length">Cycle Length:</label>
+				<input type="number" id="cycle-length" name="cycle-length" required>
+	
+				<label for="period-length">Period Length:</label>
+				<input type="number" id="period-length" name="period-length" required>
+	
+				<button type="submit" class="btn_res" >Calculate</button>
+				
+			</form>
+		   
+	</div>
+
+    
+
+    <div class="popup" id="popup">
+        <img src="{%static 'calender.png'%}" alt="">
+        <div id="result"></div>
+        
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+    <script src="{%static 'nextPeriod.js'%}"></script>
+    <script>
+        let popup = document.getElementById("popup");
+        let blur=document.getElementById("bg_blur");
+
+        // e.preventDefault();
+        function bluropen(){
+			blur.style.display="block";
+           
+        }
+        function openPopup(){
+           bluropen();
+           popup.style.visibility="visible" ;
+           popup.style.top="50%" ;
+           popup.style.transform="translate(-50%,-50%) scale(1)";
+		  
+           
+        }
+        function closePopup(){
+			blur.style.display="none";
+            popup.style.visibility="hidden" ;
+           popup.style.top="0" ;
+           popup.style.transform="translate(-50%,-50%) scale(0.1)";
+        }
+
+    </script>
+	
+       <!-- footer section starts -->
+ {% include "footer.html" %}
+ <!-- footer section ends -->
+</body>
+   
+
