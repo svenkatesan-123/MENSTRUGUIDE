@@ -10,9 +10,17 @@ from sklearn.metrics import accuracy_score
 
 
 def home(request):
+    try:
+       return render(request,'pcosHome.html',{'re':request.session['hola']})
+    except:
+         return render(request,'pcosHome.html')
     return render(request, 'pcosHome.html')
 
 def predict(request):
+    try:
+       return render(request,'pcosPredict.html',{'re':request.session['hola']})
+    except:
+         return render(request,'pcosPredict.html')
     return render(request, 'pcosPredict.html')
 
 def result(request):
@@ -48,7 +56,11 @@ def result(request):
     elif(temp1=="ab-"):
         val4=18
     else:
-        return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
+         try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+         except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
+        # return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
    
     
     
@@ -59,6 +71,10 @@ def result(request):
     elif(temp2=="irregular"):
         val5=4
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
 
     val6 = float(request.GET['n6'])
@@ -70,6 +86,10 @@ def result(request):
     elif(temp3=="no"):
         val8=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val9 = float(request.GET['n9'])
     val10 = float(request.GET['n10'])
@@ -81,6 +101,10 @@ def result(request):
     elif(temp2=="no"):
         val12=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val13 = (request.GET['n13'])
     temp2=val13.lower()
@@ -89,6 +113,10 @@ def result(request):
     elif(temp2=="no"):
         val13=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val14 = (request.GET['n14'])
     temp2=val14.lower()
@@ -97,6 +125,10 @@ def result(request):
     elif(temp2=="no"):
         val14=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val15 = (request.GET['n15'])
     temp2=val15.lower()
@@ -105,6 +137,10 @@ def result(request):
     elif(temp2=="no"):
         val15=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val16 = (request.GET['n16'])
     temp2=val16.lower()
@@ -113,6 +149,10 @@ def result(request):
     elif(temp2=="no"):
         val16=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val17 = (request.GET['n17'])
     temp2=val17.lower()
@@ -121,6 +161,10 @@ def result(request):
     elif(temp2=="no"):
         val17=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
     val18 = (request.GET['n18'])
     temp2=val18.lower()
@@ -129,6 +173,10 @@ def result(request):
     elif(temp2=="no"):
         val18=0
     else:
+        try:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs",'re':request.session['hola']})
+        except:
+            return render(request,'pcosPredict.html', {"result2":"Incorrect inputs"})
         return render(request, 'pcosPredict.html', {"result2":"Incorrect inputs"})
 
     pred = model.predict([[val1, val2, val3, val4, val5, val6, val7, val8, val9, val10, val11, val12, val13, val14, val15, val16, val17, val18]])
@@ -139,5 +187,8 @@ def result(request):
         result1 = "You might have PCOS, Kindly consult your doctor!"
     else:
         result1 = "You do not have PCOS!"
-
+    try:
+        return render(request,'pcosPredict.html', {"result2":result1,'re':request.session['hola']})
+    except:
+        return render(request,'pcosPredict.html', {"result2":result1})
     return render(request, 'pcosPredict.html', {"result2":result1})

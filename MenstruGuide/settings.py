@@ -152,3 +152,8 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+
