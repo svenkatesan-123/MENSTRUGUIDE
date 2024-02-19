@@ -1,13 +1,22 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate , login as auth , logout
 from .models import RegisterForm
 # Create your views here.
 def login(request):
     return render(request,'login.html')
+def logout(request):
+     request.session['hola']=None
+     return redirect('/')
+     
+
 
 def homePg(request):
-    return render(request,'home.html')
+    try:
+       return render(request,'home.html',{'re':request.session['hola']})
+    except:
+         return render(request,'home.html')
+
 def registerform(request):
      if request.method == 'POST':
         
@@ -32,13 +41,14 @@ def loginform(request):
           rpass=request.POST['rpass'] 
          
           chke=RegisterForm.objects.filter(Email=remail,Password=rpass).values()
-          if chke is not None:
+          
+          if chke is not None and len(chke)>0:
+               request.session['hola']=chke
                return redirect('/')
           else:
                return redirect('/login')
           return render(request,'login.html',{'result1':chke}) 
         
-    
+
           
-     
-            
+           

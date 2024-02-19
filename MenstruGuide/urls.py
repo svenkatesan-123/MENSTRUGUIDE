@@ -44,6 +44,7 @@ urlpatterns = [
     path('ovulation', vt.ovulation),
     path('pregnancyTracker', vt.pregnancyTracker),
     # path('login',vh.login),
+    path('logout',vh.logout),
     path('login', vac.login_page, name="login"),
     path('MenstrualAwareness',vi.MenstrualAwareness),
     path('absenceOfPeriods',vi.absenceOfPeriods),

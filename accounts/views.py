@@ -11,33 +11,35 @@ from home.models import RegisterForm
 
 
 def login_page(request):
+    return render(request,'login.html')
     
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        user_obj = User.objects.filter(username = email)
+    # if request.method == 'POST':
+    #     email = request.POST.get('email')
+    #     password = request.POST.get('password')
+    #     user_obj = User.objects.filter(username = email)
 
-        if not user_obj.exists():
-            messages.warning(request, 'Account not found.')
-            return HttpResponseRedirect(request.path_info)
+    #     if not user_obj.exists():
+    #         messages.warning(request, 'Account not found.')
+    #         return HttpResponseRedirect(request.path_info)
 
 
-        if not user_obj[0].profile.is_email_verified:
-            messages.warning(request, 'Your account is not verified.')
-            return HttpResponseRedirect(request.path_info)
+    #     if not user_obj[0].profile.is_email_verified:
+    #         messages.warning(request, 'Your account is not verified.')
+    #         return HttpResponseRedirect(request.path_info)
 
-        user_obj = authenticate(username = email , password= password)
-        if user_obj:
-            login(request , user_obj)
-            return redirect('/')
+    #     user = authenticate(username = email , password= password)
+    #     if user:
+    #         if user.is_active:
+    #             login(request , user)
+    #             return redirect('/homeRemedies')
 
         
 
-        messages.warning(request, 'Invalid credentials')
-        return HttpResponseRedirect(request.path_info)
+    #     messages.warning(request, 'Invalid credentials')
+    #     return HttpResponseRedirect(request.path_info)
 
 
-    return render(request ,'login.html')
+    # return render(request ,'login.html')
 
 
 def register_page(request):
@@ -100,13 +102,36 @@ def loginform(request):
     if request.method == 'POST':
           remail=request.POST['remail'] 
           rpass=request.POST['rpass'] 
+          user_obj = User.objects.filter(username = remail)
+
+          if not user_obj.exists():
+            messages.warning(request, 'Account not found.')
+            return HttpResponseRedirect(request.path_info)
+
+
+          if not user_obj[0].profile.is_email_verified:
+            messages.warning(request, 'Your account is not verified.')
+            return HttpResponseRedirect(request.path_info)
+
+          user = authenticate(username = remail , password= rpass)
+          if user:
+            login(request , user)
+            return redirect('/homeRemedies')
+
+        
+
+          messages.warning(request, 'Invalid credentials')
+          return HttpResponseRedirect(request.path_info)
+
+
+    return redirect('/') 
          
-          chke=RegisterForm.objects.filter(Email=remail,Password=rpass).values()
-          if chke is not None:
-               return redirect('/')
-          else:
-               return redirect('/login')
-          return render(request,'login.html',{'result1':chke}) 
+        #   chke=RegisterForm.objects.filter(Email=remail,Password=rpass).values()
+        #   if chke is not None:
+        #        return redirect('/login')
+        #   else:
+        #        return redirect('/login')
+        #   return render(request,'login.html',{'result1':chke}) 
         
     
           
