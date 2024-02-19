@@ -76,10 +76,16 @@
 
                         </ul>
                     </li>
-
+                    
                     <li class="login">
+                        {%if re|length > 0 or re is not none %}
+                        <a href="logout" class="login_a">Logout</a>
+                        {%else%}
                         <a href="login" class="login_a">Login</a>
-                        <!-- <button class="login_a">Login</button> -->
+                       
+                      {%endif%}
+                        
+                         <!-- <button class="login_a">Login</button> -->
                     </li>
 
                     <li class="menu-item">
