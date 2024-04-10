@@ -70,17 +70,19 @@
         }
 
         .feature {
+           
             color: #A20000;
             font-weight: bold;
             margin-bottom: 10%;
             height: 25px;
             font-size: 25px;
-            margin-left: 20px;
+            padding-left: 20px;
         }
 
         .inputfeature {
+            
             margin-left: 20%;
-            margin-bottom: 10%;
+            margin-bottom: 36%;
             height: 25px;
             margin-right: 20%;
         }
@@ -445,114 +447,545 @@ body.hidden-scrolling{
 	opacity:0;
 	transition: all 0.3s ease;
 }
+.predcontain{
+ 
+    margin-left:30%;
+    padding-right:20%;
+    display:flex;
+    justify-content: space-between;
+}
+.predcontaininner1{
+    width: 10%;
+    margin-right: 30%;
+    
+}
+.np1{
+    padding-left: 32%;
+    color:red;
+    padding-bottom: 2%;
+    display:none;
+    
+}
+
     </style>
 </head>
 
 <body>
+   
     <!-- nav -->
 	
 	<!-- header end -->
     <!-- <p>Welcome to predictions page</p> -->
     <div class="predform" align="center" class="main">
         <h1 class="headpred2">Please enter the following information:</h1>
-        <form action="result">
-            <table class="predform">
-                <tr class="rowform">
-                    <td class="feature" align="right">Age (yrs)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n1"></td>
-                </tr>
+        <form action="result" onsubmit="return validateForm()">
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Age (yrs)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input  id="ag" onchange="age()" class="inputfeature" type="number" name="n1">
+                </div>
+            </div>
+            <p class="np1" id="np1">Enter the valid age </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Weight (kg)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="wt1" onchange="wt()" class="inputfeature" type="number" name="n2">
+                </div>
+            </div>
+            <p class="np1" id="np2">Enter valid weight</p>
+            <div class="predcontain">
+                <div >
+                    <h3  class="feature" align="right">Height (cm)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="ht1" onchange="ht()" class="inputfeature" type="number" name="n3">
+                </div>
+            </div>
+            <p   class="np1" id="np3">Enter valid height </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Blood Group</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="bg1" onchange="bg()" class="inputfeature" type="text" name="n4">
+                </div>
+            </div>
+            <p   class="np1" id="np4">Enter the valid Blood Group </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Cycle (Regular/Irregular)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="cycle1" onchange="cycle()" class="inputfeature" type="text" name="n5">
+                </div>
+            </div>
+            <p class="np1" id="np5">Enter the valid cycle </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Cycle length(days)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="cylen1" onchange="cylen()" class="inputfeature" type="text" name="n6">
+                </div>
+            </div>
+            <p class="np1" id="np6">Enter the valid cycle length </p>
+            <div class="predcontain">
+                <div >
+                    
+                    <h3 class="feature" align="right">Marriage Status (Yrs)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="mar1" onchange="mar()" class="inputfeature" type="number" name="n7">
+                </div>
+            </div>
+            <p class="np1" id="np7">Enter the valid marriage status </p>
+            <div class="predcontain">
+                <div >
+                
+                    <h3 class="feature" align="right">Pregnant(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="pg1" onchange="pg()" class="inputfeature" type="text" name="n8">
+                </div>
+            </div>
+            <p class="np1" id="np8">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    
+                    <h3 class="feature" align="right">No. of aborptions</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="nab1" onchange="nab()" class="inputfeature" type="number" name="n9">
+                </div>
+            </div>
+            <p class="np1" id="np9">Enter the valid no. </p>
+            <div class="predcontain">
+                <div >
+                   
+                    <h3 class="feature" align="right">Hip(inch)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="hp1" onchange="hp()" class="inputfeature" type="number" name="n10">
+                </div>
+            </div>
+            <p class="np1" id="np10">Enter the valid size </p>
+            <div class="predcontain">
+                <div >
+               
+                    <h3 class="feature" align="right">Waist(inch)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="wit1" onchange="wit()" class="inputfeature" type="number" name="n11">
+                </div>
+            </div>
+            <p class="np1" id="np11">Enter the valid size </p>
+            <div class="predcontain">
+                <div >
+                 
+                    <h3 class="feature" align="right">Weight gain(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="wg1" onchange="wg()" class="inputfeature" type="text" name="n12">
+                </div>
+            </div>
+            <p class="np1" id="np12">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                                    
+                  
+                    <h3 class="feature" align="right">Hair growth(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="hg1" onchange="hg()" class="inputfeature" type="text" name="n13">
+                </div>
+            </div>
+            <p class="np1" id="np13">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Skin darkening (Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="sd1" onchange="sd()" class="inputfeature" type="text" name="n14">
+                </div>
+            </div>
+            <p class="np1" id="np14">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Hair loss(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="hl1" onchange="hl()" class="inputfeature" type="text" name="n15">
+                </div>
+            </div>
+            <p class="np1" id="np15">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Pimples(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="pmp1" onchange="pmp()"class="inputfeature" type="text" name="n16">
+                </div>
+            </div>
+            <p class="np1" id="np16">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Fast food (Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="food1" onchange="food()" class="inputfeature" type="text" name="n17">
+                </div>
+            </div>
+            <p class="np1" id="np17">Enter the valid ans </p>
+            <div class="predcontain">
+                <div >
+                    <h3 class="feature" align="right">Reg.Exercise(Y/N)</h3>
+                </div>
+                <div class="predcontaininner1">
+                    <input id="re1" onchange="re()" class="inputfeature" type="text" name="n18">
+                </div>
+            </div>
+            <p class="np1" id="np18">Enter the valid ans </p>
+                    
+   
+                    
+                 
+                   
+                   
+                   
+               
+               
+                    
+                   
+                    
+                   
+                   
 
-                <tr>
-                    <td class="feature" align="right">Weight (kg)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n2"></td>
-                </tr>
+        
+            
+                    
+                  
+                    
+                  
+               
+                
+                
 
-                <tr>
-                    <td class="feature" align="right">Height (cm)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n3"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Blood Group</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n4"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Cycle (Regular/Irregular)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n5"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Cycle length(days)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n6"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Marraige Status (Yrs)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n7"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Pregnant(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n8"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">No. of aborptions</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n9"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Hip(inch)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n10"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Waist(inch)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n11"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Weight gain(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n12"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Hair growth(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n13"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Skin darkening (Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n14"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Hair loss(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n15"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Pimples(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n16"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Fast food (Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n17"></td>
-                </tr>
-
-                <tr>
-                    <td class="feature" align="right">Reg.Exercise(Y/N)</td>
-                    <td align="left"><input class="inputfeature" type="text" name="n18"></td>
-                </tr>
-
-            </table>
+              
             <input type="submit" class="sub">
         </form>
 
         <div class="resu">Result: {{result2}}</div>
     </div>
+    <script>
+       
+        function age() {
+            el=document.getElementById("np1");
+
+          const x = document.getElementById("ag");
+            if(x.value<0 || x.value>150){
+                el.style.display="block"; 
+                return false; 
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        
+        function wt() {
+            el=document.getElementById("np2");
+
+          const x = document.getElementById("wt1");
+            if(x.value<0 || x.value>700){
+                el.style.display="block";
+                return false; 
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function ht() {
+            el=document.getElementById("np3");
+
+          const x = document.getElementById("ht1");
+            if(x.value<0 || x.value>300){
+                el.style.display="block";  
+                return false; 
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function bg() {
+            let el=document.getElementById("np4");
+
+          var x = document.getElementById("bg1");
+     
+          x=x.value.toString().toLowerCase();
+          console.log(x); 
+            if(x=="a+" || x=="a-"|| x=="b+"|| x=="b-"|| x=="o+"|| x=="o-"|| x=="ab+"|| x=="ab-"){
+              
+                el.style.display="none";
+                return true;
+          }
+          else{
+            el.style.display="block";
+            return false;  
+          }
+
+        }
+        function cycle() {
+            el=document.getElementById("np5");
+
+          var x = document.getElementById("cycle1");
+          x=x.value.toString().toLowerCase();
+            if(x=="regular" || x=="irregular"){
+                el.style.display="none";
+                return true;
+               
+        
+          }
+          else{
+            el.style.display="block";
+            return false;  
+          }
+
+        }
+        function cylen() {
+            el=document.getElementById("np6");
+
+          const x = document.getElementById("cylen1");
+            if(x.value<18 || x.value>40){
+                el.style.display="block"; 
+                return false;  
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function mar() {
+            el=document.getElementById("np7");
+
+          const x = document.getElementById("mar1");
+            if(x.value<0 || x.value>100){
+                el.style.display="block";
+                return false;   
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function pg() {
+            el=document.getElementById("np8");
+
+          var x = document.getElementById("pg1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function nab() {
+            el=document.getElementById("np9");
+
+          const x = document.getElementById("nab1");
+            if(x.value<0 || x.value>100){
+                el.style.display="block";  
+                return false; 
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+
+      
+        function hp() {
+            el=document.getElementById("np10");
+
+          const x = document.getElementById("hp1");
+            if(x.value<0 || x.value>400){
+                el.style.display="block"; 
+                return false;  
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function wit() {
+            el=document.getElementById("np11");
+
+          const x = document.getElementById("wit1");
+            if(x.value<0 || x.value>400){
+                el.style.display="block"; 
+                return false;  
+        
+          }
+          else{
+            el.style.display="none";
+            return true;
+          }
+
+        }
+        function wg() {
+            el=document.getElementById("np12");
+
+          var x = document.getElementById("wg1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function hg() {
+            el=document.getElementById("np13");
+
+          var x = document.getElementById("hg1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function sd() {
+            el=document.getElementById("np14");
+
+          var x = document.getElementById("sd1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function hl() {
+            el=document.getElementById("np15");
+
+          var x = document.getElementById("hl1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function pmp() {
+            el=document.getElementById("np16");
+
+          var x = document.getElementById("pmp1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function food() {
+            el=document.getElementById("np17");
+
+          var x = document.getElementById("food1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function re() {
+            el=document.getElementById("np18");
+
+          var x = document.getElementById("re1");
+          x=x.value.toString().toLowerCase();
+            if(x=="yes" || x=="no"){
+                el.style.display="none";
+                return true;
+                 
+        
+          }
+          else{
+            el.style.display="block";
+            return false; 
+          }
+
+        }
+        function validateForm(){
+           
+                if(age()&&wt()&&ht()&&bg()&&cycle()&&cylen()&&pg()&&nab()&&hp()&&wit()&&wg()&&mar()&&hg()&&sd()&&hl()&&pmp()&&food()&&re()){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+        }
+     
+        </script>
 	<!-- footer section starts -->
 	{% include "footer.html" %}
 	<!-- footer section ends -->
